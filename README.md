@@ -1,12 +1,12 @@
-# x11docker/xfce
+# smus/xfce
 
-XFCE desktop in Docker image. Based on Debian.
+XFCE desktop in Docker image for ppc64le. Based on Debian.
  - Run XFCE desktop in docker.
- - Use [x11docker](https://github.com/mviereck/x11docker) to run GUI applications and desktop environments in docker images. 
+ - Use [x11docker](https://github.com/BallonLac/dockerfile-x11docker-xserver_ppc64le) to run GUI applications and desktop environments in docker images. 
 
 # Command examples: 
- - Single application: `x11docker x11docker/xfce thunar`
- - Full desktop: `x11docker --desktop x11docker/xfce`
+ - Single application: `x11docker smus/xfce thunar`
+ - Full desktop: `x11docker --desktop smus/xfce`
 
 # Options:
  - Persistent home folder stored on host with   `--home`
@@ -24,7 +24,7 @@ Look at `x11docker --help` for further options.
 # Extend base image
 To add your desired applications, create your own Dockerfile with this image as a base. Example:
 ```
-FROM x11docker/xfce
+FROM smus/xfce
 RUN apt-get update
 RUN apt-get install -y midori
 ```
